@@ -10,7 +10,8 @@ function validateName(req, res, next) {
   const { name } = req.body;
   if (!name || name === '') return res.status(400).json({ message: 'Invalid data!'});
 
-  next();
+  // Comentando o next para observar o comportamento da aplicação
+  // next();
 };
 
 app.post('/recipes', validateName, function (req, res) {
